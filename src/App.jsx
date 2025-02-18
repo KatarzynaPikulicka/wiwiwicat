@@ -7,7 +7,7 @@ function SoundButton() {
   const [images, setImages] = useState([]);
 
   const playSound = () => {
-    const audio = new Audio("/sound.mp3");
+    const audio = new Audio("/public/sound.mp3");
     audio.currentTime = 0;
     audio.play().catch((error) => console.error("Błąd odtwarzania:", error));
 
@@ -38,7 +38,7 @@ function SoundButton() {
         {images.map((img) => (
           <img
             key={img.id}
-            src="/cat.png"
+            src="/public/cat.png"
             alt="Obrazek"
             className="image-fall"
             style={{
