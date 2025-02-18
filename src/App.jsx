@@ -2,12 +2,14 @@ import "./App.css";
 import "./index.css";
 import { useState } from "react";
 import { Play } from "lucide-react";
+import mySound from "./assets/sound.mp3";
+import myCat from "./assets/cat.png";
 
 function SoundButton() {
   const [images, setImages] = useState([]);
 
   const playSound = () => {
-    const audio = new Audio("/public/sound.mp3");
+    const audio = new Audio(mySound);
     audio.currentTime = 0;
     audio.play().catch((error) => console.error("Błąd odtwarzania:", error));
 
@@ -38,7 +40,7 @@ function SoundButton() {
         {images.map((img) => (
           <img
             key={img.id}
-            src="/public/cat.png"
+            src={myCat}
             alt="Obrazek"
             className="image-fall"
             style={{
