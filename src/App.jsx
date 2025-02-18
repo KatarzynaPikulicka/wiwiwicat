@@ -2,8 +2,8 @@ import "./App.css";
 import "./index.css";
 import { useState } from "react";
 import { Play } from "lucide-react";
-import mySound from "./assets/sound.mp3";
-import myCat from "./assets/cat.png";
+import mySound from "/public/sound.mp3";
+import myCat from "/public/cat.png";
 
 function SoundButton() {
   const [images, setImages] = useState([]);
