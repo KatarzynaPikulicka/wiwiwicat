@@ -1,0 +1,53 @@
+
+
+.sound-button {
+  padding: 12px 32px;
+  background-color: #ff69b4;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgb(255, 177, 238, 0.4);
+  transition: background 0.3s ease;
+  max-width: 100%;
+}
+
+.sound-button:hover {
+  background-color: #d2418a;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgb(255, 177, 238, 0.8);
+}
+
+.sound-button:active {
+  transform: scale(0.90); 
+}
+
+.images-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.image-fall {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  animation: fly 3s ease-out forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
