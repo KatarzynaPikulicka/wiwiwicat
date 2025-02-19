@@ -1,6 +1,6 @@
 import "./App.css";
 import "./index.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Play } from "lucide-react";
 import mySound from "/public/sound.mp3";
 import myCat from "/public/cat.png";
@@ -56,9 +56,6 @@ function SoundButton() {
 }
 
 function App() {
-  useEffect(() => {
-    document.title = "wiwiwi";
-  }, []);
   return (
     <div>
       <SoundButton />
